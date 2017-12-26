@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>aquaponics.stekat.com</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="instafeed.min.js"></script>
+    <script type="text/javascript">
+      var feed = new Instafeed({
+        get: 'user',
+        userId: 6222370876,
+        accessToken: '6222370876.b2bd864.911c2ac30350450cae68101d17bf4cd5',
+        resolution: 'thumbnail'
+      });
+      feed.run();
+    </script>
   </head>
   <body>
     <h1>Welcome to aquaponics.stekat</h1>
     <p>
       Make something <strong>amazing</strong> with the web!
     </p>
+    <div id="instafeed"></div>
   </body>
 </html>
