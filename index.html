@@ -6,6 +6,7 @@
     <title>aquaponics.stekat.com</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <header>
@@ -18,7 +19,7 @@
     </section>
     <section>
       <div id="instafeed"></div>
-      <div class="button" id="load-more" >load more</div>
+      <div class="button" id="load-more">load more</div>
     </section>
     <footer>
       <ul>
@@ -34,26 +35,4 @@
       </ul>
     </footer>
   </body>
-  <script type="text/javascript">
-    var loadButton = document.getElementById('load-more');
-    var feed = new Instafeed({
-      get: 'user',
-      limit: 12,
-      userId: 6222370876,
-      accessToken: '6222370876.b2bd864.911c2ac30350450cae68101d17bf4cd5',
-      resolution: 'thumbnail',
-      template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
-      after: function() {
-        // disable button if no more results to load
-        if (!this.hasNext()) {
-            loadButton.style.display = 'none';
-        }
-      },
-    });
-    // bind the load more button
-    loadButton.addEventListener('click', function() {
-        feed.next();
-    });
-    feed.run();
-  </script>
 </html>
