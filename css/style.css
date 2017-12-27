@@ -1,0 +1,78 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
+
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 0.25rem 1.5rem;
+  font-size: 1.125rem;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-family: "Merriweather", sans-serif;
+  font-size: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style-type: none;
+  display: inline;
+  padding: 1rem;
+}
+
+footer li a {
+  text-decoration: none;
+}
+
+footer li a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  width: 10rem;
+  display: block;
+  color: #4a4a4a;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: solid 0.125rem rgba(0,0,0,.3);
+  border-radius: 0.125rem;
+  margin: 2rem auto;
+  padding: 0.125rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #FFCE36;
+}
+
+#intro {
+  text-align: center;
+}
+
+#instafeed {
+  text-align: center;
+}
+
+#instafeed img {
+  padding: 0.5rem;
+  transition: opacity .2s ease-in-out;
+}

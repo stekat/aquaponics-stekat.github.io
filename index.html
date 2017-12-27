@@ -4,24 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>aquaponics.stekat.com</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="instafeed.min.js"></script>
-    <script type="text/javascript">
-      var feed = new Instafeed({
-        get: 'user',
-        userId: 6222370876,
-        accessToken: '6222370876.b2bd864.911c2ac30350450cae68101d17bf4cd5',
-        resolution: 'thumbnail',
-        template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
-      });
-      feed.run();
-    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
   </head>
   <body>
-    <h1>Welcome to aquaponics.stekat</h1>
-    <p>
-      Make something <strong>amazing</strong> with the web!
-    </p>
-    <div id="instafeed"></div>
+    <header>
+      <h1>Welcome to aquaponics.stekat</h1>
+    </header>
+    <section id="intro">
+      <p>
+        Make something <strong>amazing</strong> with the web!
+      </p>
+    </section>
+    <section>
+      <div id="instafeed"></div>
+      <div class="button" id="load-more" >load more</div>
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/aquaponics.stekatdotcom/" target="_blank">Instagram</a></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/aquaponicstekat" target="_blank">Twitter</a></a>
+        </li>
+        <li>
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY SA 3.0</a>
+        </li>
+      </ul>
+    </footer>
   </body>
+  <script type="text/javascript">
+    var loadButton = document.getElementById('load-more');
+    var feed = new Instafeed({
+      get: 'user',
+      limit: 12,
+      userId: 6222370876,
+      accessToken: '6222370876.b2bd864.911c2ac30350450cae68101d17bf4cd5',
+      resolution: 'thumbnail',
+      template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
+      after: function() {
+        // disable button if no more results to load
+        if (!this.hasNext()) {
+            loadButton.style.display = 'none';
+        }
+      },
+    });
+    // bind the load more button
+    loadButton.addEventListener('click', function() {
+        feed.next();
+    });
+    feed.run();
+  </script>
 </html>
