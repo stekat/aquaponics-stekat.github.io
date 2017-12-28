@@ -3,12 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700');
 
 body {
-  background-color: white;
+  /* background-color: white; */
   font-family: "Open Sans", sans-serif;
   padding: 0.25rem 1.5rem;
   font-size: 1.125rem;
   margin: 0;
   color: #444;
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 h1 {
@@ -41,15 +47,16 @@ footer li {
   padding: 1rem;
 }
 
-footer li a {
+/* footer li a {
   text-decoration: none;
-}
+} */
 
 footer li a:hover {
   text-decoration: underline;
 }
 
 .button {
+  outline: none;
   width: 10rem;
   display: block;
   color: #4a4a4a;
@@ -62,6 +69,31 @@ footer li a:hover {
   text-decoration: none;
   text-transform: uppercase;
   background-color: #FFCE36;
+}
+
+.element {
+  flex: 1;
+  /* cursor: pointer; */
+  margin: 0.625rem;
+  min-width: 15.625rem;
+  max-width: 21.875rem;
+  width: 12.5rem;
+  /* box-shadow: 0.25rem 0.25rem 0 rgba(0,0,0,.12); */
+  box-shadow: 0 0.25rem 0.125rem 0 rgba(33,37,41,.05);
+  background-color: white;
+  /* border-bottom: solid 0.125rem rgba(0,0,0,.12); */
+  border-radius: 0.125rem;
+}
+
+.element img {
+  padding-bottom: 1rem;
+}
+
+#dashboard {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: #f8f8f8;
 }
 
 #instafeed {
