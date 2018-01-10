@@ -1,5 +1,7 @@
 var loadMoreButton;
 
+var wassertemperaturWert;
+
 var instaFeed = new Instafeed({
     get: 'user',
       limit: 12,
@@ -14,11 +16,23 @@ var instaFeed = new Instafeed({
       },
 });
 
+function onMessageEvent(messageEvent)
+{
+    var message = JSON.parse(messageEvent.data);
+
+    wassertemperaturWert.textContent = message.Wert + ' °C';
+}
+
 window.onload = function() {
+    wassertemperaturWert = document.getElementById('wassertemperaturWert');
+
     loadMoreButton = document.getElementById('load-more');
     loadMoreButton.addEventListener('click', function() {
         instaFeed.next();
     });
 
     instaFeed.run();
+
+    const socket = new WebSocket('ws://127.0.0.1:8100');
+    socket.addEventListener('message', function(event) {onMessageEvent(event)});
 };

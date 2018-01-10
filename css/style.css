@@ -32,9 +32,8 @@ section {
 }
 
 footer {
-  padding: 1rem;
+  padding: 1.25rem;
   text-align: center;
-  font-size: 0.875rem;
 }
 
 footer ul {
@@ -47,12 +46,32 @@ footer li {
   padding: 1rem;
 }
 
-/* footer li a {
-  text-decoration: none;
-} */
+footer small {
+  font-size: 0.875rem;
+}
 
-footer li a:hover {
+footer small a {
   text-decoration: underline;
+}
+
+a svg:hover .st0 { 
+  fill:url(#SVGID_1_);
+}
+
+a svg:hover .st1 { 
+  fill:url(#SVGID_2_);
+}
+
+a svg:hover .st2 { 
+  fill:#654C9F;
+}
+
+a svg:hover .cls-2 { 
+  fill: #2ba9e1;
+}
+
+.socialIcon svg {
+  width: 3.75rem;
 }
 
 .button {
