@@ -8,7 +8,8 @@ body {
   padding: 0.25rem 1.5rem;
   font-size: 1.125rem;
   margin: 0;
-  color: #444;
+  color: #444; 
+  background: #fff;
 }
 
 a {
@@ -108,11 +109,14 @@ a svg:hover .cls-2 {
   padding-bottom: 1rem;
 }
 
+#dashboard-section {
+  background: #f8f8f8;
+}
+
 #dashboard {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  background: #f8f8f8;
 }
 
 #instafeed {
