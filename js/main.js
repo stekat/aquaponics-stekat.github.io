@@ -4,7 +4,7 @@ var wassertemperaturWert;
 
 var instaFeed = new Instafeed({
     get: 'user',
-      limit: 12,
+      limit: 6,
       userId: 6222370876,
       accessToken: '6222370876.b2bd864.911c2ac30350450cae68101d17bf4cd5',
       resolution: 'thumbnail',
