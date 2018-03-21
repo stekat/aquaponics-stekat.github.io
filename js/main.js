@@ -4,7 +4,7 @@ var wassertemperaturWert;
 
 var instaFeed = new Instafeed({
     get: 'user',
-      limit: 6,
+      limit: 5,
       userId: 6222370876,
       accessToken: '6222370876.b2bd864.911c2ac30350450cae68101d17bf4cd5',
       resolution: 'thumbnail',
@@ -33,6 +33,6 @@ window.onload = function() {
 
     instaFeed.run();
 
-    const socket = new WebSocket('ws://127.0.0.1:8100');
-    socket.addEventListener('message', function(event) {onMessageEvent(event)});
+    // const socket = new WebSocket('ws://127.0.0.1:8100');
+    // socket.addEventListener('message', function(event) {onMessageEvent(event)});
 };
