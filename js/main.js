@@ -6,7 +6,7 @@ var instaFeed = new Instafeed({
     get: 'user',
       limit: 5,
       userId: 6222370876,
-      accessToken: 'dffef3af091d4b278d03b1dd96c44ab5',
+      accessToken: '6222370876.dffef3af091d4b278d03b1dd96c44ab5',
       resolution: 'thumbnail',
       template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
       after: function() {
