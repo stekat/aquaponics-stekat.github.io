@@ -6,6 +6,7 @@
     <title>aquaponics.stekat.com</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script type="text/javascript" src="js/dweet.io.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
@@ -18,7 +19,7 @@
       </p>
     </section>
     <section id="dashboard-section">
-      <h2>Messwerte 23:06:44</h2>
+      <h2 id="messwerteTimestamp">Messwerte 23:06:44</h2>
       <div class="centred-flex-wrap">
         <div class="dashboard-element">
           <a href=details/wassertemperatur/>
@@ -31,7 +32,7 @@
         <div class="dashboard-element">
           <a href="details/aussentemperatur/">
             <p>Aktuell</p>
-            <h2>23.5 °C</h2>
+            <h2 id="aussentemperaturWert">23.5 °C</h2>
             <p>Temperatur Au&szlig;en</p>
             <img src="https://via.placeholder.com/128x128">
           </a>        
@@ -39,7 +40,7 @@
         <div class="dashboard-element">
           <a href="details/innentemperatur/">
             <p>Aktuell</p>
-            <h2>25.5 °C</h2>
+            <h2 id="innentemperaturWert">25.5 °C</h2>
             <p>Temperatur Innen</p>
             <img src="https://via.placeholder.com/128x128">
           </a>
