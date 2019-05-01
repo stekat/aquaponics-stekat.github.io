@@ -41,20 +41,18 @@ function onDweetEvent(dweetMessage){
     if (seconds.length === 1) { seconds = "0" + seconds; }
 
     messwerteTimestamp.textContent = 'Messwerte ' + hour + ':' + minutes + ':' + seconds;
+    
+    if (dweetMessage.content.id==="waterTemperatureTank"){
+        wassertemperaturWert.textContent = dweetMessage.content.value + ' °C';
+    }
 
-    dweetMessage.content.sensors.forEach(function(sensor) {
-        if (sensor.type==="temperature" && sensor.id==="water"){
-            wassertemperaturWert.textContent = sensor.value + ' °C';
-        }
+    if (dweetMessage.content.id==="airTemperatureOutside"){
+        aussentemperaturWert.textContent = dweetMessage.content.value + ' °C';
+    }
 
-        if (sensor.type==="temperature" && sensor.id==="airOutside"){
-            aussentemperaturWert.textContent = sensor.value + ' °C';
-        }
-
-        if (sensor.type==="temperature" && sensor.id==="airInside"){
-            innentemperaturWert.textContent = sensor.value + ' °C';
-        }
-    });
+    if (dweetMessage.content.id==="airTemperatureInsideGreenhouse"){
+        innentemperaturWert.textContent = dweetMessage.content.value + ' °C';
+    }
 }
 
 window.onload = function() {
