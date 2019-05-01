@@ -1,2 +1,2 @@
 # aquaponics.stekat.github.io
-aquaponics website http://aquaponics.stekat.com
+aquaponics website https://aquaponics.stekat.com
