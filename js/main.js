@@ -42,15 +42,15 @@ function onDweetEvent(dweetMessage){
 
     messwerteTimestamp.textContent = 'Messwerte ' + hour + ':' + minutes + ':' + seconds;
     
-    if (dweetMessage.content.id==="waterTemperatureTank"){
+    if (dweetMessage.content.id==="WaterTemperatureFishTank"){
         wassertemperaturWert.textContent = dweetMessage.content.value + ' °C';
     }
 
-    if (dweetMessage.content.id==="airTemperatureOutside"){
+    if (dweetMessage.content.id==="AirTemperatureOutside"){
         aussentemperaturWert.textContent = dweetMessage.content.value + ' °C';
     }
 
-    if (dweetMessage.content.id==="airTemperatureInsideGreenhouse"){
+    if (dweetMessage.content.id==="AirTemperatureInsideGreenhouse"){
         innentemperaturWert.textContent = dweetMessage.content.value + ' °C';
     }
 }
@@ -61,12 +61,12 @@ window.onload = function() {
     wassertemperaturWert = document.getElementById('wassertemperaturWert');
     aussentemperaturWert = document.getElementById('aussentemperaturWert');
        
-    loadMoreButton = document.getElementById('load-more');
-    loadMoreButton.addEventListener('click', function() {
-        instaFeed.next();
-    });
+    // loadMoreButton = document.getElementById('load-more');
+    // loadMoreButton.addEventListener('click', function() {
+    //     instaFeed.next();
+    // });
 
-    instaFeed.run();
+    // instaFeed.run();
 
     dweetio.get_latest_dweet_for(dweetThingId, function(err, dweet){
         onDweetEvent(dweet[0]);
