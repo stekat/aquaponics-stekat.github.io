@@ -30,17 +30,13 @@ function onMessageEvent(messageEvent)
 
 function onDweetEvent(dweetMessage){
     
-    var timestamp = dweetMessage.created;
+    const timestamp = dweetMessage.created;
 
-    var hour = '' + timestamp.getHours(); 
-    var minutes = '' + timestamp.getMinutes();
-    var seconds = '' + timestamp.getSeconds();
-    
-    if (hour.length === 1) { hour = "0" + hour; }
-    if (minutes.length === 1) { minutes = "0" + minutes; }
-    if (seconds.length === 1) { seconds = "0" + seconds; }
+    const weekday = new Intl.DateTimeFormat('de-DE', { weekday: 'long' }).format(timestamp);
+    const date = new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: 'long', year: 'numeric' }).format(timestamp);
+    const time = new Intl.DateTimeFormat('de-DE', { hour: '2-digit', minute: '2-digit', hour12: false }).format(timestamp);
 
-    messwerteTimestamp.textContent = 'Messwerte ' + hour + ':' + minutes + ':' + seconds;
+    messwerteTimestamp.textContent = `Letzte Aktualisierung am ${weekday} ${date} um ${time} Uhr`;
     
     if (dweetMessage.content.id==="WaterTemperatureFishTank"){
         wassertemperaturWert.textContent = dweetMessage.content.value + ' °C';
