@@ -149,19 +149,15 @@ a svg:hover .fill0 {
 }
 
 .headerContainer {
-  padding: 24px 15px;
   display: flex;
   flex-wrap: wrap;
+  padding: 24px 15px;
   justify-content: space-between;
 }
 
 .navigation-bar {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; */
-  display: none;
   width: 100%;
+  display: none;
 }
 
 .navigation-bar.is-active {
@@ -189,14 +185,11 @@ a svg:hover .fill0 {
 }
 
 .navigation-menu-list {
-  /* display: flex;
-  flex-wrap: wrap; */
   padding: 0;
   list-style-type: none;
 }
 
 .navigation-menu-list li {
-  /* text-align: center; */
   margin: 15px auto;
   border-bottom: 1px solid #cdcdd4;
 }
@@ -205,4 +198,36 @@ a svg:hover .fill0 {
   display: block;
   min-height: 40px;
   font-weight: normal;
+}
+
+/* Desktop menu */
+@media all and (min-width: 700px) {
+  .headerContainer {
+    flex-wrap: unset;
+    align-items: center;
+    justify-content: unset;
+  }
+  
+  .navigation-menu-button {
+    display: none;
+  }
+
+  .navigation-bar {
+    display: flex;
+  }
+
+  .navigation-menu-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navigation-menu-list li {
+    margin: 0 0 0 5%;
+    border-bottom: none;
+  }
+
+  .navigation-menu-list li a {
+    min-height: unset;
+  }
 }
