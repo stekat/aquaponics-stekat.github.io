@@ -223,7 +223,7 @@ a svg:hover .fill0 {
   }
 
   .navigation-menu-list li {
-    margin: 0 0 0 5%;
+    margin: 0 5% 0 0;
     border-bottom: none;
   }
 
