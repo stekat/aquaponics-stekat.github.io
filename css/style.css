@@ -156,7 +156,8 @@ a svg:hover .fill0 {
 }
 
 .headerContainer img {
-  
+  width: 260px;
+    height: 85px; 
 }
 
 .navigation-bar {
@@ -204,12 +205,24 @@ a svg:hover .fill0 {
   font-weight: normal;
 }
 
+@media all and (max-width: 360px) {
+  .headerContainer img {
+    width: 210px;
+    height: 70px; 
+  }
+}
+
 /* Desktop menu */
 @media all and (min-width: 700px) {
   .headerContainer {
     flex-wrap: unset;
     align-items: center;
     justify-content: unset;
+  }
+
+  .headerContainer img {
+    width: 303px;
+    height: 100px;
   }
   
   .navigation-menu-button {
