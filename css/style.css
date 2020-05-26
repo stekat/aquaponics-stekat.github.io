@@ -139,6 +139,14 @@ a svg:hover .fill0 {
   background: #f5f5f5;
 }
 
+.current-action {
+  display: none;
+}
+
+.action-detail {
+  display: block;
+}
+
 #instafeed {
   text-align: center;
 }
