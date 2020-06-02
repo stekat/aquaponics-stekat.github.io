@@ -1,7 +1,7 @@
 var timerID;
 var timestampMesswerte;
 var valueLufttemperatur;
-var valueAnzahlFlutungen;
+var valueIntervallFlutung;
 var valueWassertemperatur;
 var valueSubstrattemperatur;
 var elementActionDetailFlutung;
@@ -20,7 +20,7 @@ window.onload = function() {
 
     timestampMesswerte = document.getElementById('timestampMesswerte');
     valueLufttemperatur = document.getElementById('valueLufttemperatur');
-    valueAnzahlFlutungen = document.getElementById('valueAnzahlFlutungen')
+    valueIntervallFlutung = document.getElementById('valueAnzahlFlutungen')
     valueWassertemperatur = document.getElementById('valueWassertemperatur');
     valueSubstrattemperatur = document.getElementById('valueSubstrattemperatur');
     elementActionDetailFlutung = document.getElementById('action-detail-Flutung');
@@ -58,7 +58,7 @@ function onTimerTick() {
         let remainingTime = 15 - (currentMinute - (15*(this.Math.floor(currentMinute/15))));        
         this.elementActionDetailFlutung.style.display="block";
         this.elementCurrentActionFlutung.style.display="none";
-        valueAnzahlFlutungen.textContent = remainingTime === 0 ? 1 : remainingTime;
+        valueIntervallFlutung.textContent = remainingTime === 0 ? 1 : remainingTime;
     }
 }
 
@@ -85,5 +85,27 @@ function onDweetEvent(dweetMessage){
 
     if (dweetMessage.content.id==="AirTemperatureOutside"){
         valueLufttemperatur.textContent = dweetMessage.content.value + ' °C';
+    }
+}
+
+function onDweetPumpEvent(dweetMessage){
+    if (dweetMessage.content.id === "WaterPumpFishTank"){
+        if (dweetMessage.content.status === 0){
+
+            this.timerID = this.setTimeout(function() {
+                this.setInterval(this.onTimerTick, 60 * 1000);
+            }, (60 - currentDate.getSeconds()) * 1000);
+
+            
+
+            let remainingTime = 15 - (currentMinute - (15*(this.Math.floor(currentMinute/15))));        
+            this.elementActionDetailFlutung.style.display="block";
+            this.elementCurrentActionFlutung.style.display="none";
+            valueIntervallFlutung.textContent = remainingTime === 0 ? 1 : remainingTime;
+        }
+        else{
+            this.elementActionDetailFlutung.style.display="none";
+            this.elementCurrentActionFlutung.style.display="block";
+        }
     }
 }
