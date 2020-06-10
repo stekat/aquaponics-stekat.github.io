@@ -255,4 +255,12 @@ a svg:hover .fill0 {
   .navigation-menu-list li a {
     min-height: unset;
   }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
 }
