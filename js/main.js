@@ -1,9 +1,7 @@
 function insertContact() {
     var c = ['l','a','@','n','h','o','s','.','t','r','e','k','v','-','q','i','p','u','c'];
   
-    // var hostnameRegexMatch = window.location.hostname.match(/.*?\.(.*)/);
-
-    var hostnameRegexMatch = "example.org"
+    var hostnameRegexMatch = window.location.hostname.match(/.*?\.(.*)/);
 
     if (hostnameRegexMatch === null){
       return;
