@@ -66,30 +66,6 @@ footer small a {
   text-decoration: underline;
 }
 
-a svg:hover .st0 { 
-  fill:url(#SVGID_1_);
-}
-
-a svg:hover .st1 { 
-  fill:url(#SVGID_2_);
-}
-
-a svg:hover .st2 { 
-  fill:#654C9F;
-}
-
-a svg:hover .cls-2 { 
-  fill: #2ba9e1;
-}
-
-a svg:hover .fill0 { 
-  fill:#1AB7EA;
-}
-
-.socialIcon svg {
-  width: 3.75rem;
-}
-
 .button {
   outline: none;
   width: 10rem;
@@ -213,6 +189,11 @@ a svg:hover .fill0 {
   font-weight: normal;
 }
 
+.content-link {
+  color: #1d70b8;
+  text-decoration: none;
+}
+
 @media all and (max-width: 360px) {
   .headerContainer img {
     width: 210px;
@@ -261,6 +242,10 @@ a svg:hover .fill0 {
   }
 
   footer a:hover {
+    text-decoration: underline;
+  }
+
+  .content-link:hover {
     text-decoration: underline;
   }
 }

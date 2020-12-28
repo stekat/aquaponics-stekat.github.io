@@ -7,207 +7,200 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/dweet.io.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/monitor.js"></script>
   </head>
   <body>
     <header class="headerContainer">
-      <a href="index.html">
-        <img src="images/logo.svg">
-      </a>
+      <a href="index.html"><img src="images/logo.svg"></a>
       <button class="navigation-menu-button" id="navigation-menu-button"></button>
       <nav class="navigation-bar" id="navigation-bar">
         <ul class="navigation-menu-list">
          <li><a href="index.html"><strong>Monitor</strong></a></li>
          <li><a href="media/index.html">Media</a></li>
-         <li><a href="technik/index.html">Technik</a></li>
+         <li><a href="die-anlage/index.html">Details zur Anlage</a></li>
         </ul>
       </nav>
     </header>
-    <section id="dashboard-section">
-      <header>
-        <h1>Messwerte</h1>
-        <span id="timestampMesswerte">Letzte Aktualisierung ... wird geladen ...</span>
-      </header>
-      <div class="centred-flex-wrap">
-        <div class="dashboard-element">
-          <a href="details/wassertemperatur/" >
-            <p>Aktuell</p>
-            <h2 id="valueWassertemperatur">n/a</h2>
-            <p>Temperatur Wasser</p>
-          </a>
-        </div>
-        <div class="dashboard-element">
-          <a href="details/substrattemperatur/">
-            <p>Aktuell</p>
-            <h2 id="valueSubstrattemperatur">n/a</h2>
-            <p>Temperatur Substrat</p>
-          </a>
-        </div>
-        <div class="dashboard-element">
-          <a href="details/lufttemperatur/">
-            <p>Aktuell</p>
-            <h2 id="valueLufttemperatur">n/a</h2>
-            <p>Temperatur Luft (innen)</p>
-          </a>        
-        </div>
-        <div class="dashboard-element">
-          <a href="details/energieverbrauch/">
-            <p>Heute</p>
-            <h2 id="valueEnergieverbrauch">n/a</h2>
-            <p>Energieverbrauch</p>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section id="dashboard-section">
-      <header>
-        <h1>Steuerung</h1>
-      </header>
-      <div class="centred-flex-wrap">
-        <div class="dashboard-element">
-          <div id="current-action-Flutung" class="current-action">
-            <p>Aktuell</p>
-            <h2>Flutung</h2>
-            <p>aktiv</p>
+    <main>
+      <section id="dashboard-section">
+        <header>
+          <h1>Messwerte</h1>
+          <span id="timestampMesswerte">Letzte Aktualisierung ... wird geladen ...</span>
+        </header>
+        <div class="centred-flex-wrap">
+          <div class="dashboard-element">
+            <a href="details/wassertemperatur/index.html" >
+              <p>Aktuell</p>
+              <h2 id="valueWassertemperatur">n/a</h2>
+              <p>Temperatur Wasser</p>
+            </a>
           </div>
-          <div id="action-detail-Flutung" class="action-detail">
-            <p>N&auml;chste Flutung in</p>
-            <h2 id="valueAnzahlFlutungen">n/a</h2>
-            <p>Minuten</p>
+          <div class="dashboard-element">
+            <a href="details/substrattemperatur/index.html">
+              <p>Aktuell</p>
+              <h2 id="valueSubstrattemperatur">n/a</h2>
+              <p>Temperatur Substrat</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="details/lufttemperatur/index.html">
+              <p>Aktuell</p>
+              <h2 id="valueLufttemperatur">n/a</h2>
+              <p>Temperatur Luft (innen)</p>
+            </a>        
+          </div>
+          <div class="dashboard-element">
+            <a href="details/energieverbrauch/index.html">
+              <p>Heute</p>
+              <h2 id="valueEnergieverbrauch">n/a</h2>
+              <p>Energieverbrauch</p>
+            </a>
           </div>
         </div>
-        <div class="dashboard-element">
-          <a href="details/fuetterung/">
-            <p>N&auml;chste F&uuml;tterung in</p>
-            <h2 id="valueAnzahlFuetterungen">n/a</h2>
-            <p>Minuten</p>
-          </a>
+      </section>
+      <section id="dashboard-section">
+        <header><h1>Steuerung</h1></header>
+        <div class="centred-flex-wrap">
+          <div class="dashboard-element">
+            <div id="current-action-Flutung" class="current-action">
+              <p>Aktuell</p>
+              <h2>Flutung</h2>
+              <p>aktiv</p>
+            </div>
+            <div id="action-detail-Flutung" class="action-detail">
+              <p>N&auml;chste Flutung in</p>
+              <h2 id="valueAnzahlFlutungen">n/a</h2>
+              <p>Minuten</p>
+            </div>
+          </div>
+          <div class="dashboard-element">
+            <a href="details/fuetterung/index.html">
+              <p>N&auml;chste F&uuml;tterung in</p>
+              <h2 id="valueAnzahlFuetterungen">n/a</h2>
+              <p>Minuten</p>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section id="dashboard-section">
-      <header>
-        <h1>Fischbesatz</h1>
-      </header>
-      <div class="centred-flex-wrap">
-        <div class="dashboard-element">
-          <a href="#" >
-            <p>Aktuell</p>
-            <h2>216</h2>
-            <p>Panzerwelse</p>
-          </a>
+      </section>
+      <section id="dashboard-section">
+        <header><h1>Fischbesatz</h1></header>
+        <div class="centred-flex-wrap">
+          <div class="dashboard-element">
+            <a href="#" >
+              <p>Aktuell</p>
+              <h2>216</h2>
+              <p>Panzerwelse</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>161</h2>
+              <p>Guppys</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>5</h2>
+              <p>Papageienplatys</p>
+            </a>        
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>18</h2>
+              <p>Antennenwelse</p>
+            </a>        
+          </div>
         </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>161</h2>
-            <p>Guppys</p>
-          </a>
+      </section>
+      <section id="dashboard-section">
+        <header><h1>Pflanzenbesatz</h1></header>
+        <div class="centred-flex-wrap">
+          <div class="dashboard-element">
+            <a href="#" >
+              <p>Aktuell</p>
+              <h2>2</h2>
+              <p>Salate</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>4</h2>
+              <p>Tomaten</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>n+</h2>
+              <p>Petersilie</p>
+            </a>        
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>n+</h2>
+              <p>Basilikum</p>
+            </a>        
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>4</h2>
+              <p>Sellerie</p>
+            </a>        
+          </div>
         </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>5</h2>
-            <p>Papageienplatys</p>
-          </a>        
+      </section>
+      <section id="dashboard-section">
+        <header><h1>Ernte</h1></header>
+        <div class="centred-flex-wrap">
+          <div class="dashboard-element">
+            <a href="#" >
+              <p>Aktuell</p>
+              <h2>1</h2>
+              <p>Salatkopf</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>0 kg</h2>
+              <p>Tomaten</p>
+            </a>
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>0 kg</h2>
+              <p>Weisskohl</p>
+            </a>        
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>0 kg</h2>
+              <p>Blumenkohl</p>
+            </a>        
+          </div>
+          <div class="dashboard-element">
+            <a href="#">
+              <p>Aktuell</p>
+              <h2>0 kg</h2>
+              <p>Sellerie</p>
+            </a>        
+          </div>
         </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>18</h2>
-            <p>Antennenwelse</p>
-          </a>        
-        </div>
-      </div>
-    </section>
-    <section id="dashboard-section">
-      <header>
-        <h1>Pflanzenbesatz</h1>
-      </header>
-      <div class="centred-flex-wrap">
-        <div class="dashboard-element">
-          <a href="#" >
-            <p>Aktuell</p>
-            <h2>2</h2>
-            <p>Salate</p>
-          </a>
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>4</h2>
-            <p>Tomaten</p>
-          </a>
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>n+</h2>
-            <p>Petersilie</p>
-          </a>        
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>n+</h2>
-            <p>Basilikum</p>
-          </a>        
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>4</h2>
-            <p>Sellerie</p>
-          </a>        
-        </div>
-      </div>
-    </section>
-    <section id="dashboard-section">
-      <header>
-        <h1>Ernte</h1>
-      </header>
-      <div class="centred-flex-wrap">
-        <div class="dashboard-element">
-          <a href="#" >
-            <p>Aktuell</p>
-            <h2>1</h2>
-            <p>Salatkopf</p>
-          </a>
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>0 kg</h2>
-            <p>Tomaten</p>
-          </a>
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>0 kg</h2>
-            <p>Weisskohl</p>
-          </a>        
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>0 kg</h2>
-            <p>Blumenkohl</p>
-          </a>        
-        </div>
-        <div class="dashboard-element">
-          <a href="#">
-            <p>Aktuell</p>
-            <h2>0 kg</h2>
-            <p>Sellerie</p>
-          </a>        
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <footer>
       <ul>
         <li><a href="https://vimeo.com/user53471500" target="_blank">Vimeo</a></li>
-        <li><a href="https://www.instagram.com/aquaponics.stekatdotcom/" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com/aquaponicstekat" target="_blank">Twitter</a></li>
+        <li><a href="https://www.flickr.com/photos/166075428@N08/" target="_blank">flickr</a></li>
+        <li><a name="mail">e-mail</a></li>
       </ul>
       <small>
         <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA-3.0</a>
